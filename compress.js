@@ -15,7 +15,7 @@ function compressSurrogates(input) {
 	}
 
 	const unicodeString = unicodeChars.join('');
-	return `eval(unescape(escape\`${unicodeString}\`.replace(/u../g, '')))`;
+	return `eval(unescape(escape\`${unicodeString}\`.replace(/u../g,'')))`;
 }
 
 // Combine pairs of ASCII characters into single Unicode characters.
