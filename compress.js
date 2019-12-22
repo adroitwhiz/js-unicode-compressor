@@ -1,3 +1,4 @@
+// Convert pairs of ASCII characters to low/high surrogate pairs.
 function compressSurrogates(input) {
 	const highSurrogate = 0xD8 << 8;
 	const lowSurrogate = 0xDC << 8;
@@ -17,6 +18,7 @@ function compressSurrogates(input) {
 	return `eval(unescape(escape\`${unicodeString}\`.replace(/u../g, '')))`;
 }
 
+// Combine pairs of ASCII characters into single Unicode characters.
 function compressBytes(input) {
 	const unicodeChars = [];
 	if (input.length % 2 === 1) input += ' ';
