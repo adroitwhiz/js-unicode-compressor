@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="compress.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<div id="options">
+			Compress two ASCII characters to:
+			<label>
+				<input type="radio" id="compress-surrogates" name="compression-option">
+				One surrogate pair
+			</label>
+			<label>
+				<input type="radio" id="compress-bytes" name="compression-option" checked>
+				One UTF-16 character
+			</label>
+		</div>
+		<textarea id="input"></textarea>
+		<div id="character-counts">
+			<div id="character-count-uncompressed"></div>
+			<div id="character-count-compressed"></div>
+		</div>
+		<div id="output-container">
+			<pre id="output"></pre>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
